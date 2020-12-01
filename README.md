@@ -4,8 +4,8 @@
 |  Column            |  Type   |  Option                    |
 | ------------------ | ------- | -------------------------- |
 |  user_nickname     | string  | null: false                |
-|  user_email        | string  | null: false   unique:true  |
-|  user_password     | string  | null: false                |
+|  email             | string  | null: false   unique:true  |
+|  password          | string  | null: false                |
 
 ### Association  
 
@@ -17,8 +17,8 @@ has_many    questions
 |  Column              |  Type    |  Option                    |
 | -------------------- | -------- | -------------------------- |
 | pharmacist_name      | string   | null: false                |
-| pharmacist_email     | string   | null: false  unique:true   |
-| pharmacist_password  | string   | null: false                |
+| email                | string   | null: false  unique:true   |
+| password             | string   | null: false                |
 | number               | integer  | null: false                |
 | family_name          | string   | null: false                |
 | first_name           | string   | null: false                |

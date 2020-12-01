@@ -1,0 +1,16 @@
+ <div>小児お薬相談室</div>
+   <header class='top-page-header'>
+     <div class='nav'>
+       <ul class='list-right'> 
+         <% if user_signed_in? || pharmacist_signed_in? %>
+          <li><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class:"user-log-out"  %></li>
+          <li><%= link_to 'ログアウト',destroy_pharmacist_session_path, method: :delete,class:"pharmacist-log-out"  %></li>
+         <% else %>
+          <li><%= link_to 'ユーザー新規登録', new_user_registration_path, class:"user-sign-in"  %></li>
+          <li><%= link_to '薬剤師新規登録', new_pharmacist_registration_path, class: "pharmacist-sign-in" %></li>
+          <li><%= link_to 'ユーザーログイン', new_user_session_path, class:"user-log-in"  %></li>
+          <li><%= link_to '薬剤師ログイン', new_pharmacist_session_path, class:"user-sign-in"  %></li>
+         <% end %>
+       </ul>
+     </div>
+    
